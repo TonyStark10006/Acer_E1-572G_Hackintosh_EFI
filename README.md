@@ -1,11 +1,11 @@
 # Acer_E1-572G_Hackintosh_EFI
 
-my PC model is Acer E1-572G-54204G50Mnkk
+PC model is Acer E1-572G-54204G50Mnkk
+
 all equitments and features work well except bluetooth, the specs below
 
 > * chipset:    		intel HM87
 > * cpu: 				intel haswell i5 4200u
-> * Discrete Graphics: 	AMD R7 M265
 > * Audio: 				Realtek ALC282 V2
 > * Ethernet:			Broadcom BCM57786
 > * WireLess Network:	Qualcomm AR9565
