@@ -1,0 +1,21 @@
+#build the Ethernet Mac Driver
+sudo ~rc/bin/buildit -update PrevailingTopaz -project IOEthernetAVBController -target IOEthernetAVBControlleriOS .
+
+# Use Xcode build to build the kext.
+#
+# pushd ~dimambro/Broadcom_Ethernet/AppleEthernetBriadcomCaesar
+# sudo xcodebuild -sdk iphoneos.internal -arch arm64 -configuration Debug -target AppleEthernetBriadcomCaesariOS
+# sudo mkdir -p /private/tmp/AppleEthernetBriadcomCaesar.roots/BuildRecords/AppleEthernetBriadcomCaesar_install/Root/System/Library/Extensions/
+# sudo cp -rf build/AppleEthernetBriadcomCaesar.build/Debug-iphoneos/AppleEthernetBriadcomCaesar.kext /private/tmp/AppleEthernetBriadcomCaesar.roots/BuildRecords/AppleEthernetBriadcomCaesar_install/Root/System/Library/Extensions/
+# popd
+
+# Make the kernel cache.
+# pushd kernelcachebuilder; rm -Rf build
+
+# Build the AppleEthernetBriadcomCaesar Driver 
+# make TARGETS=n56 EXTRA_KEXT_PATHS="/private/tmp/AppleEthernetBriadcomCaesar.roots/BuildRecords/AppleEthernetBriadcomCaesar_install/Root/System/Library/Extensions" EXTRA_BUNDLES="com.apple.driver.AppleEthernetBriadcomCaesar" ELIDE_BUNDLES="com.apple.driver.AppleBCM5776xEmbedded" BUILDS=development SIGN=development VERBOSE=YES
+
+# popd ..
+# setenv boot-args "debug=0x14e  serial=3 apple-bcm5776x-debug=0xffff io=0x14"
+# usb get /Users/dimambro/E86_Env/projects/EmbeddedDeviceTrees/obj/e86-dev.im4p ; devicetree
+# usb get /Users/dimambro/E86_Env/projects/kernelcachebuilder/build/development.n56/kernelcache.development.n56 ; bootx

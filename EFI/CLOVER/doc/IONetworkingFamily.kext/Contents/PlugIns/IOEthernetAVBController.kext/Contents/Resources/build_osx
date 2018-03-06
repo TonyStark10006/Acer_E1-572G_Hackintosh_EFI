@@ -1,0 +1,6 @@
+#build the Ethernet Mac Driver
+sudo ~rc/bin/buildit -archive -update PrevailingLobo -project IOEthernetAVBController -target IOEthernetAVBControllerOSX .
+
+#
+# Use Xcode build to build the kext.
+# sudo xcodebuild -sdk iphoneos.internal -arch arm64 -configuration Debug -target IOEthernetAVBController
