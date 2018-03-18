@@ -76,24 +76,18 @@
 		</array>
 		<key>DSDT</key>
 		<dict>
-			<key>DropOEM_DSM</key>
-			<true/>
 			<key>Fixes</key>
 			<dict>
 				<key>#Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
-				<key>FixDarwin</key>
-				<true/>
 			</dict>
-			<key>Name</key>
-			<string>DSDT.aml</string>
 			<key>Patches</key>
 			<array>
 				<dict>
 					<key>Comment</key>
 					<string>change OSID to XSID (to avoid match against _OSI XOSI patch)</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					T1NJRA==
@@ -107,7 +101,7 @@
 					<key>Comment</key>
 					<string>change _OSI to XOSI</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					X09TSQ==
@@ -121,7 +115,7 @@
 					<key>Comment</key>
 					<string>change _DSM to XDSM</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					X0RTTQ==
@@ -219,7 +213,7 @@
 					<key>Comment</key>
 					<string>change PCI0.VID to IGPU #1 (Thinkpad)</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>
 					UENJMFZJRF8=
@@ -233,7 +227,7 @@
 					<key>Comment</key>
 					<string>change PCI0.VID to IGPU #2 (Thinkpad)</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>
 					VklEXwhfQURSDAAAAgA=
@@ -258,10 +252,6 @@
 					</data>
 				</dict>
 			</array>
-			<key>SlpSmiAtWake</key>
-			<true/>
-			<key>SuspendOverride</key>
-			<true/>
 		</dict>
 		<key>DropTables</key>
 		<array>
@@ -274,8 +264,6 @@
 				<string>DMAR</string>
 			</dict>
 		</array>
-		<key>HaltEnabler</key>
-		<true/>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
@@ -294,15 +282,15 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>nv_disable=1 dart=0 darkwake=0 kext-dev-mode=1 -v -ath9565</string>
+		<string>nv_disable=1 dart=0 kext-dev-mode=1 -ath9565</string>
 		<key>DefaultVolume</key>
 		<string>MacOS</string>
 		<key>Legacy</key>
-		<string>LegacyBiosDefault</string>
-		<key>LegacyBiosDefaultEntry</key>
-		<integer>0</integer>
+		<string>PBR</string>
 		<key>Log</key>
 		<false/>
+		<key>NeverHibernate</key>
+		<true/>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
@@ -360,7 +348,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<string>76</string>
+			<string>3</string>
 		</dict>
 		<key>FakeID</key>
 		<dict>
@@ -401,10 +389,6 @@
 				</dict>
 			</array>
 		</dict>
-		<key>Hide</key>
-		<array>
-			<string>Preboot</string>
-		</array>
 		<key>Language</key>
 		<string>it:0</string>
 		<key>Mouse</key>
@@ -426,7 +410,7 @@
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>embedded</string>
+		<string>tonymacx86</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -450,9 +434,9 @@
 	<key>KernelAndKextPatches</key>
 	<dict>
 		<key>AppleIntelCPUPM</key>
-		<false/>
+		<true/>
 		<key>AppleRTC</key>
-		<false/>
+		<true/>
 		<key>DellSMBIOSPatch</key>
 		<false/>
 		<key>ForceKextsToLoad</key>
@@ -898,45 +882,35 @@
 		<key>#ProductName-MacBookAir</key>
 		<string>MacBookAir6,2</string>
 		<key>BiosReleaseDate</key>
-		<string>02/02/2018</string>
+		<string>12/22/2016</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBA61.88Z.0105.B00.1802021222</string>
+		<string>MBP111.88Z.0138.B21.1612221936</string>
 		<key>Board-ID</key>
-		<string>Mac-7DF21CB3ED6977E5</string>
+		<string>Mac-189A3D4F975D5FFC</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
-		<key>BoardSerialNumber</key>
-		<string>C02401310OPDM65A8</string>
 		<key>BoardType</key>
 		<integer>10</integer>
-		<key>BoardVersion</key>
-		<string>1.0</string>
 		<key>ChassisAssetTag</key>
-		<string>Air-Enclosure</string>
+		<string>MacBook-Aluminum</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
-		<string>0x0A</string>
+		<string>0x08</string>
 		<key>Family</key>
-		<string>MacBook Air</string>
-		<key>FirmwareFeatures</key>
-		<string>0xE00FE137</string>
-		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF3F</string>
+		<string>MacBook Pro</string>
 		<key>LocationInChassis</key>
 		<string>Part Component</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
 		<key>Mobile</key>
 		<true/>
-		<key>PlatformFeature</key>
-		<string>0xFFFF</string>
 		<key>ProductName</key>
-		<string>MacBookAir6,2</string>
+		<string>MacBookPro11,1</string>
 		<key>SerialNumber</key>
-		<string>C02M228EF5V7</string>
+		<string>C02L34Q7FGYY</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
