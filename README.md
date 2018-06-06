@@ -17,13 +17,18 @@ All equipments and features work well except bluetooth, the specs below
 2. 10.12.6 and below, copy the EFI folder to the EFI partition, then remove /EFI/CLOVER/drivers64UEFI/apfs.efi.
 repair the permissions and rebuild the caches, done.
 
-Tips: 
+## Tips: 
+#### 1. notice
 + if install the 10.13 - 10.13.3
     + (1 copy the ext/IONetworkingFamily.kext and ext/IO80211Family.kext to S/L/E
-    + (2 copy the ext/apfs.efi to /EFI/CLOVER/drivers64UEFI, repair the permissions and rebuild the caches.
+    + (2 copy the relevant ext/apfs.efi(e.g. 10.13.3 apfs.efi) to /EFI/CLOVER/drivers64UEFI, repair the permissions and rebuild the caches.
     
 + if install the 10.13.4+
     + (1 copy the ext/IO80211Family.kext to S/L/E
-    + (2 copy the ext/apfs.efi to /EFI/CLOVER/drivers64UEFI, repair the permissions and rebuild the caches.
+    + (2 copy the relevant ext/apfs.efi to /EFI/CLOVER/drivers64UEFI, repair the permissions and rebuild the caches.
 
-ext/IO80211Family.kext for WIFI, ext/IONetworkingFamily.kext for ethernet, some useful efi drivers maybe clover needed also has placed in ext folder.
+#### 2. explanation
+ext/IO80211Family.kext for WIFI<br>
+ext/IONetworkingFamily.kext for ethernet<br>
+IntelGraphicsFixup.kext for resolving safari crash problem while watching online video<br>
+some useful efi drivers maybe clover needed also has placed in ext folder.
