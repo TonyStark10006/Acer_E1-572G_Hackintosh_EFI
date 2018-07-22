@@ -386,7 +386,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<string>3</string>
+			<integer>3</integer>
 		</dict>
 		<key>FakeID</key>
 		<dict>
@@ -425,6 +425,10 @@
 				</dict>
 			</array>
 		</dict>
+		<key>Hide</key>
+		<array>
+			<string>Preboot</string>
+		</array>
 		<key>Language</key>
 		<string>it:0</string>
 		<key>Mouse</key>
