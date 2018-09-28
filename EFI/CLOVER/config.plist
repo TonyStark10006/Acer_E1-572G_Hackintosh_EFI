@@ -491,7 +491,7 @@
 				<key>Comment</key>
 				<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				ILniAAAADzA=
@@ -501,6 +501,22 @@
 				<key>Replace</key>
 				<data>
 				ILniAAAAkJA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable panic kext logging on 10.13 Release kernel Find:       8a0284c0 7442 Replace:    8a0284c0 eb42 MatchOS:    10.14.x </string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				igKEwHRC
+				</data>
+				<key>MatchOS</key>
+				<string>10.14</string>
+				<key>Replace</key>
+				<data>
+				igKEwOtC
 				</data>
 			</dict>
 		</array>
@@ -932,7 +948,7 @@
 				<key>Comment</key>
 				<string>change 15 port limit to 26 in XHCI kext</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				g710////EA==
@@ -1006,6 +1022,26 @@
 				<key>Replace</key>
 				<data>
 				g32UGg+DlwQ=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB Port limit patch 10.14</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				g/sPD4MDBQAA
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.14</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>
+				g/sPkJCQkJCQ
 				</data>
 			</dict>
 		</array>
