@@ -18,6 +18,7 @@ All equipments and features work well except bluetooth, the specs below
 repair the permissions and rebuild the caches, done.
 
 ## Tips: 
+### wireless network cards of Qualcomm was no longer supported on 10.14 Mojave, follow [this guide](http://bbs.pcbeta.com/viewthread-1790406-1-1.html) to refind them
 #### 1. notice
 + if install the 10.13 - 10.13.3
     + (1 copy the ext/IONetworkingFamily.kext and ext/IO80211Family.kext to S/L/E
