@@ -322,7 +322,7 @@
 		<key>Arguments</key>
 		<string>uia_exclude=HP14;HP15;HP16;HP17;HS04;HS05;HS06;HS07;HS09;SSP2;SSP3;SSP4 nv_disable=1 dart=0 kext-dev-mode=1 -ath9565</string>
 		<key>DefaultVolume</key>
-		<string>MacOS</string>
+		<string>macOS</string>
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>Log</key>

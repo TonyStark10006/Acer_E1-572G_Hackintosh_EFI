@@ -28,6 +28,9 @@ repair the permissions and rebuild the caches, done.
     + (1 copy the ext/IO80211Family.kext to S/L/E
     + (2 copy the relevant ext/apfs.efi to /EFI/CLOVER/drivers64UEFI, repair the permissions and rebuild the caches.
 
++ if install 10.14+
+    + copy ext/AirPortAtheros40.kext to S/L/E/IO80211Family.kext/Contents/Plugins/ & repair the permissions and rebuild the caches & reboot to enable wireless card. file comes from [this repo](https://github.com/athlonreg/Enable-AR956X-AR946X-AR9485-in-your-hacintosh), it's modifed for AR956X matched 10.13 from [insanelymac](https://www.insanelymac.com/forum/topic/312045-atheros-wireless-driver-os-x-101112-for-unsupported-cards/?page=20) but also worked on 10.14
+
 #### 2. explanation
 ext/IO80211Family.kext for WIFI<br>
 ext/IONetworkingFamily.kext for ethernet<br>
