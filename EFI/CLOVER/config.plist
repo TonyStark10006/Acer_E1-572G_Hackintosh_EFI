@@ -181,6 +181,34 @@
 					SERBVQ==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change AZAL to HDEF</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QVpBTA==
+					</data>
+					<key>Replace</key>
+					<data>
+					SERFRg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change HDAS to HDEF</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SERBUw==
+					</data>
+					<key>Replace</key>
+					<data>
+					SERFRg==
+					</data>
+				</dict>
 			</array>
 		</dict>
 		<key>DisabledAML</key>
@@ -220,7 +248,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 -ath9565 -cdfon -igfxnohdmi  uia_exclude=HP14;HP15;HP16;HP17;HS04;HS05;HS06;HS07;HS09;SS02;SS03;SS04 kext-dev-mode=1 alcid=28</string>
+		<string>dart=0 nv_disable=1 -ath9565 -cdfon  uia_exclude=HP14;HP15;HP16;HP17;HS04;HS05;HS06;HS07;HS09;SS02;SS03;SS04 kext-dev-mode=1 alcid=28</string>
 		<key>DefaultVolume</key>
 		<string>macOS</string>
 		<key>NeverHibernate</key>
@@ -455,10 +483,6 @@
 			</dict>
 			<key>PciRoot(0)/Pci(0x1b,0)</key>
 			<dict>
-				<key>PinConfigurations</key>
-				<data>
-				AA==
-				</data>
 				<key>layout-id</key>
 				<integer>3</integer>
 			</dict>
@@ -522,7 +546,7 @@
 			<true/>
 		</dict>
 		<key>Theme</key>
-		<string>BGM</string>
+		<string>newyear</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -646,6 +670,60 @@
 				<key>Replace</key>
 				<data>
 				g/sPkJCQkJCQ
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>0x0a260006 关闭 0204 端口, 改变 0105 DP 端口为 0204 HDMI (RehabMan)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AgQJAAAEAACHAAAA
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
+				<key>Replace</key>
+				<data>
+				AgQJAAAIAACHAAAA
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>0x0a260006 9MB光标字节(vbo)，仅2端口(RehabMan)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				BgAmCgEDAwMAAAACAAAwAQAAYAA=
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelFramebufferAzul</string>
+				<key>Replace</key>
+				<data>
+				BgAmCgEDAwMAAAACAAAwAQAAkAA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>10.14+-第二阶段花屏</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AQAAdWQ=
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IOGraphicsFamily</string>
+				<key>Replace</key>
+				<data>
+				AQAA62Q=
 				</data>
 			</dict>
 		</array>
