@@ -546,7 +546,7 @@
 			<true/>
 		</dict>
 		<key>Theme</key>
-		<string>newyear</string>
+		<string>random</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -560,11 +560,11 @@
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
-			<true/>
+			<false/>
 			<key>Intel</key>
 			<true/>
 			<key>NVidia</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>ig-platform-id</key>
 		<string>0x0a260006</string>
@@ -750,7 +750,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02420405J9F0V51H</string>
+		<string>C02346405CDFD471M</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -780,9 +780,9 @@
 		<key>ProductName</key>
 		<string>MacBookAir6,2</string>
 		<key>SerialNumber</key>
-		<string>C02LJ0LGF5V7</string>
+		<string>C02LPSYFF5V7</string>
 		<key>SmUUID</key>
-		<string>E5E6B880-3C33-40BF-883C-BF86E3876095</string>
+		<string>AEB12E8B-E921-4E3E-A1C5-0386E6457641</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
