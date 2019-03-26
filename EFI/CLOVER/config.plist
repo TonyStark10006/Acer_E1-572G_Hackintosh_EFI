@@ -211,12 +211,6 @@
 				</dict>
 			</array>
 		</dict>
-		<key>DisabledAML</key>
-		<array>
-			<string>SSDT.aml</string>
-			<string>SSDT-XCPM.aml</string>
-			<string>SSDT-PluginType1.aml</string>
-		</array>
 		<key>DropTables</key>
 		<array>
 			<dict>
@@ -241,6 +235,8 @@
 			</dict>
 			<key>NoOemTableId</key>
 			<false/>
+			<key>PluginType</key>
+			<string>1</string>
 		</dict>
 	</dict>
 	<key>Boot</key>
@@ -248,7 +244,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 -ath9565 -cdfon  uia_exclude=HP14;HP15;HP16;HP17;HS04;HS05;HS06;HS07;HS09;SS02;SS03;SS04 kext-dev-mode=1 alcid=28</string>
+		<string>nv_disable=1 -ath9565 -cdfon uia_exclude=HP14;HP15;HP16;HP17;HS04;HS05;HS06;HS07;HS09;SS02;SS03;SS04 kext-dev-mode=1 alcid=28 darkwake=no</string>
 		<key>DefaultVolume</key>
 		<string>macOS</string>
 		<key>NeverHibernate</key>
@@ -580,7 +576,7 @@
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
 		</array>
 		<key>KernelLapic</key>
-		<true/>
+		<false/>
 		<key>KernelPm</key>
 		<true/>
 		<key>KernelToPatch</key>
@@ -656,7 +652,7 @@
 				<key>Comment</key>
 				<string>USB Port limit patch 10.14.1 10.14.2 Beta (credits DalianSky)</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				g/sPD4OPBAAA
@@ -724,6 +720,66 @@
 				<key>Replace</key>
 				<data>
 				AQAA62Q=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB port limit patch #2 10.14.x modify by DalianSky(credit PMHeart)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				g+MP0w==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Name</key>
+				<string>com.apple.iokit.IOUSBHostFamily</string>
+				<key>Replace</key>
+				<data>
+				g+M/0w==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB Port limit patch #3 10.14.x modify by DalianSky(credits PMheart)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				g/sPDw==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>
+				g/s/Dw==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB Port limit patch #4 10.14.x modify by DalianSky(credits PMheart)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				g/8PDw==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>
+				g/8/Dw==
 				</data>
 			</dict>
 		</array>
