@@ -171,7 +171,7 @@
 					<key>Comment</key>
 					<string>change B0D3 to HDAU</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					QjBEMw==
@@ -185,7 +185,7 @@
 					<key>Comment</key>
 					<string>change AZAL to HDEF</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					QVpBTA==
@@ -199,7 +199,7 @@
 					<key>Comment</key>
 					<string>change HDAS to HDEF</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					SERBUw==
@@ -207,6 +207,76 @@
 					<key>Replace</key>
 					<data>
 					SERFRg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change LPC to LPCB</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					TFBDXw==
+					</data>
+					<key>Replace</key>
+					<data>
+					TFBDQg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change HECI to IMEI</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SEVDSQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					SU1FSQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change GPRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					R1BSVwI=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFBSVwI=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _PTS to ZPTS</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1BUUwE=
+					</data>
+					<key>Replace</key>
+					<data>
+					WlBUUwE=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _WAK to ZWAK</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1dBSwk=
+					</data>
+					<key>Replace</key>
+					<data>
+					WldBSwk=
 					</data>
 				</dict>
 			</array>
@@ -242,7 +312,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>nv_disable=1 -ath9565 -cdfon uia_exclude=HP14;HP15;HP16;HP17;HS04;HS05;HS06;HS07;HS09;SS02;SS03;SS04 kext-dev-mode=1 alcid=28 darkwake=no</string>
+		<string>nv_disable=1 -ath9565 -cdfon uia_exclude=HP14;HP15;HP16;HP17;HS04;HS05;HS06;HS07;HS09;SS02;SS03;SS04 kext-dev-mode=1 alcid=28 darkwake=no dart=0</string>
 		<key>DefaultVolume</key>
 		<string>macOS</string>
 		<key>NeverHibernate</key>
@@ -371,8 +441,6 @@
 		<dict>
 			<key>#IntelGFX</key>
 			<string>0x04128086</string>
-			<key>IntelGFX</key>
-			<string>0x04128086</string>
 		</dict>
 		<key>Properties</key>
 		<dict>
@@ -382,6 +450,8 @@
 				<string>Enable internal display after sleep for 0x0a2e0008 on 10.10.2-10.12.x (c) syscl</string>
 				<key>## patch1</key>
 				<string>Enable internal display after sleep for 0x0a2e000a, 0x0a26000a</string>
+				<key>#HDMI Port</key>
+				<string>0x3e9b0000, 0306 port</string>
 				<key>#framebuffer-con1-enable</key>
 				<integer>1</integer>
 				<key>#framebuffer-con1-flags</key>
@@ -395,6 +465,10 @@
 				<key>#framebuffer-con1-type</key>
 				<data>
 				AAgAAA==
+				</data>
+				<key>#framebuffer-con2-alldata</key>
+				<data>
+				AwYIAAAEAADHAwAA
 				</data>
 				<key>#framebuffer-con2-flags</key>
 				<data>
@@ -546,6 +620,11 @@
 		</dict>
 		<key>#ig-platform-id</key>
 		<string>0x0a260006</string>
+		<key>EDID</key>
+		<dict>
+			<key>Inject</key>
+			<false/>
+		</dict>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
@@ -556,7 +635,7 @@
 			<false/>
 		</dict>
 		<key>ig-platform-id</key>
-		<string>0x0a260006</string>
+		<string>0x0a160000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -621,6 +700,8 @@
 				</data>
 			</dict>
 		</array>
+		<key>KernelXCPM</key>
+		<true/>
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
