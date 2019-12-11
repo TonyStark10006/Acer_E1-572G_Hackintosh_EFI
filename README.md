@@ -1,4 +1,4 @@
-# Acer_E1-572G_Hackintosh_EFI
+# Acer E1-572G Hackintosh EFI Folder
 
 Laptop model: Acer E1-572G-54204G50Mnkk
 
@@ -38,3 +38,10 @@ ext/IO80211Family.kext for WIFI<br>
 ext/IONetworkingFamily.kext for ethernet<br>
 IntelGraphicsFixup.kext for resolving safari crash problem while watching online video<br>
 some useful efi drivers maybe clover needed also has placed in ext folder.
+
+
+### Credits
+[Apple Inc.](https://www.apple.com)<br/>
+[RehabMan](https://bitbucket.org/RehabMan)<br/>
+[DalianSky](https://blog.daliansky.net)<br/>
+Special thanks to the enthusiastic commenters on [pcbeta](http://bbs.pcbeta.com) & [tonymacx86](https://www.tonymacx86.com)

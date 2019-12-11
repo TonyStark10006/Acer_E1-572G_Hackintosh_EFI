@@ -441,6 +441,8 @@
 		<dict>
 			<key>#IntelGFX</key>
 			<string>0x04128086</string>
+			<key>IntelGFX</key>
+			<string>0x04128086</string>
 		</dict>
 		<key>Properties</key>
 		<dict>
@@ -635,7 +637,7 @@
 			<false/>
 		</dict>
 		<key>ig-platform-id</key>
-		<string>0x0a160000</string>
+		<string>0x0a260006</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
